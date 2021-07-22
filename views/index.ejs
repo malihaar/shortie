@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>shorten your url!</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shortie Lil Baddie</h1>
+        <form action="/shortUrls" method="POST" class="my-4 form-inline">
+            <label for="fullUrl" class="sr-only">Url</label>
+            <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+            <!-- <div class="myButton">
+                <input class="buttonsearch" type="submit" name="" value="">
+            </div> -->
+            <button type="submit" style="border: 0; background: transparent">
+                <img src="yay.png" width="35" height="60" alt="submit" />
+            </button>
+
+        </form>
+        <div class="table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 45%;">Full URL</th>
+                        <th style="width: 45%;">Short URL</th>
+                        <th style="width: 10%;">Clicks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% shortUrls.forEach(shortUrl => { %>
+                        <tr>
+                            <td>
+                                <a href="<%= shortUrl.full %>">
+                                    <%= shortUrl.full %>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="<%= shortUrl.short %>">
+                                    <%= shortUrl.short %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= shortUrl.clicks %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body {
+  background: #E9D2D2;
+  font-family: Lato;
+  color: #332A53;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: Shrikhand;
+  font-style: bold;
+  color: #B37BAD;
+}
+
+.container input {
+  background: #FFFFFF;
+  border: 3px solid #4F4F4F;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.container div.myButton input {
+  background: url(../search.svg) no-repeat;
+  cursor: pointer;
+  border: none;
+}
+
+.container .table table {
+  border: 3px solid #000000;
+}
+
+.container .table table tr {
+  width: 30%;
+}
+
+.container .table thead {
+  background: #B37BAD;
+  border: 3px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .table thead th {
+  font-family: Lato;
+  font-style: bold;
+}
+
+.container .table tbody a {
+  text-align: center;
+  font-family: Lato;
+  font-style: normal;
+  color: #332A53;
+}
+
+.container .table tbody a:hover {
+  color: rgba(51, 42, 83, 0.62);
+}
+/*# sourceMappingURL=style.css.map */
